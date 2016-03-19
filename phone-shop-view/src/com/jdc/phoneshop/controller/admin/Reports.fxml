@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.net.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox styleClass="content-view" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.jdc.phoneshop.controller.admin.Reports">
+	<children>
+		<HBox styleClass="title-view">
+			<children>
+				<Label styleClass="title" text="Report References" />
+			</children>
+		</HBox>
+		<HBox styleClass="control-view">
+			<children>
+				<HBox fx:id="types" styleClass="type-btns">
+					<children>
+						<ToggleButton mnemonicParsing="false" selected="true" text="ALL TYPE">
+							<toggleGroup>
+								<ToggleGroup fx:id="group" />
+							</toggleGroup>
+						</ToggleButton>
+						<ToggleButton mnemonicParsing="false" text="SELL" toggleGroup="$group" />
+						<ToggleButton mnemonicParsing="false" text="BUY" toggleGroup="$group" />
+					</children>
+				</HBox>
+				<DatePicker fx:id="dateFrom" promptText="Date From" />
+				<DatePicker fx:id="dateTo" promptText="Date To" />
+				<HBox prefHeight="27.0" prefWidth="585.0" styleClass="total-view">
+					<children>
+						<Label fx:id="totalIncomes" styleClass="total-income" text="0" />
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="-" />
+                  <Label fx:id="totalExpenses" layoutX="572.0" layoutY="10.0" styleClass="total-expense" text="0" />
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="=" />
+                  <Label fx:id="totalBalance" layoutX="415.0" layoutY="10.0" styleClass="total-profit" text="0" />
+					</children>
+				</HBox>
+			</children>
+		</HBox>
+		<VBox prefHeight="507.0" prefWidth="1180.0" styleClass="box-padding-10">
+			<children>
+				<TableView fx:id="table" prefHeight="500.0" prefWidth="1160.0">
+					<columns>
+						<TableColumn fx:id="colRefDate" prefWidth="133.99996948242188" text="Reference Date" />
+						<TableColumn fx:id="colType" prefWidth="117.0" text="Type" />
+						<TableColumn fx:id="colCategory" prefWidth="164.0" text="Category" />
+						<TableColumn fx:id="colMaker" prefWidth="135.0" text="Maker" />
+						<TableColumn fx:id="colItem" prefWidth="138.0" text="Item" />
+						<TableColumn fx:id="colUnitPrice" prefWidth="96.0" text="Unit Price" />
+						<TableColumn fx:id="colCount" prefWidth="71.0" text="Count" />
+						<TableColumn fx:id="colIncome" prefWidth="154.0" text="INCOME" />
+						<TableColumn fx:id="colExpense" prefWidth="146.0" text="EXPENSE" />
+					</columns>
+				</TableView>
+			</children>
+		</VBox>
+	</children>
+   <stylesheets>
+      <URL value="@common.css" />
+      <URL value="@report.css" />
+   </stylesheets>
+</VBox>

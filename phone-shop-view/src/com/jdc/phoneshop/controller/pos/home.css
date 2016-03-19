@@ -1,0 +1,228 @@
+.main-frame {
+	-fx-pref-width: 1180px;
+	-fx-pref-height: 720px;
+	-fx-background-color: rgb(153,153,153);
+}
+
+.message-view {
+	-fx-pref-height: 60px;
+	-fx-background-color: rgb(204,204,204);
+	-fx-padding: 0 10 0 10;
+	-fx-alignment: center-left ;
+}
+
+.message-lbl {
+	-fx-pref-width: 750px;
+}
+
+.user-view {
+	-fx-pref-width: 420px;
+	-fx-alignment: center-right;
+	-fx-spacing: 10;
+}
+
+.user-icon {
+	-fx-pref-width: 30px;
+	-fx-pref-height: 30px;
+	-fx-max-height: 30px;
+	-fx-background-image: url(../user.png) ;
+	-fx-background-position: center;
+	-fx-background-size: 80%;
+	-fx-background-repeat: no-repeat;
+}
+
+.user-name {
+ 	-fx-font-size: 15px;	
+}
+
+.panel-header {
+	-fx-padding: 5 5 0.0 5;
+	-fx-spacing: 5;
+	-fx-alignment: center-left;
+	-fx-pref-height: 120px;
+}
+
+.header-btn {
+	-fx-background-color: rgb(230,230,230);
+	-fx-pref-width: 160px;
+	-fx-pref-height: 100px;
+	-fx-alignment: center;
+	-fx-spacing: 5;
+}
+
+.header-btn-mobile {
+	-fx-background-image: url(../mobile.png); 
+	-fx-background-position: center;
+	-fx-background-size: 70%;
+	-fx-background-repeat: no-repeat;
+	-fx-pref-height: 70px;
+}
+
+.header-btn-tablet {
+	-fx-background-image: url(../tablet.png); 
+	-fx-background-position: center;
+	-fx-background-size: 70%;
+	-fx-background-repeat: no-repeat;
+	-fx-pref-height: 70px;
+}
+
+.header-btn-accessory {
+	-fx-background-image: url(../accessory.png); 
+	-fx-background-position: center;
+	-fx-background-size: 40%;
+	-fx-background-repeat: no-repeat;
+	-fx-pref-height: 70px;
+}
+
+.header-btn-category {
+	-fx-background-image: url(../category.png); 
+	-fx-background-position: center;
+	-fx-background-size: 40%;
+	-fx-background-repeat: no-repeat;
+	-fx-pref-height: 70px;
+}
+
+.header-btn-customers {
+	-fx-background-image: url(../customers.png); 
+	-fx-background-position: center;
+	-fx-background-size: 55%;
+	-fx-background-repeat: no-repeat;
+	-fx-pref-height: 70px;
+}
+
+.content-view {
+	-fx-pref-height: 660px;
+	-fx-padding: 5;
+	-fx-spacing: 5;
+}
+
+
+.panel-items {
+	-fx-pref-width: 820px;
+}
+
+.panel-right {
+	-fx-pref-width: 345px;
+	-fx-spacing: 5;
+	-fx-background-color: rgb(51,51,51);
+	-fx-padding: 0 5 0 0;
+}
+
+.customer Label{
+	-fx-text-fill: rgb(0,255,255);
+}
+
+.total-region {
+	-fx-pref-width: 345px;
+	-fx-alignment: top-right;
+	-fx-padding: 10;
+	-fx-background-color: rgb(51,51,51);
+}
+
+.total-title-label {
+	-fx-text-fill: rgb(0,255,255);
+}
+
+.total-view {
+	-fx-alignment: bottom-right;
+	-fx-pref-height: 100px;
+	-fx-background-image: url(../dollar.png);
+	-fx-background-position: left;
+	-fx-background-size: 60%;
+	-fx-background-repeat: no-repeat;
+}
+
+.total-label {
+	-fx-text-fill: rgb(0,255,255);
+	-fx-font-weight: bold;
+	-fx-font-size: 60px;
+	-fx-font-family: Arial;
+}
+
+.btn-bar {
+	-fx-pref-height: 45px;
+	-fx-spacing: 5;
+}
+
+.btn-bar-btn {
+	-fx-alignment: center-left;
+	-fx-padding: 0 10 0.0 40;
+	-fx-pref-width: 120px;
+}
+
+.btn-default {
+	-fx-background-color: rgb(204,204,204);
+}
+
+.btn-selected {
+	-fx-background-color: rgb(102,255,204);
+}
+
+.btn-mouse-o {
+	-fx-background-color: rgb(128,128,128);	
+}
+
+.btn-cancel {
+	-fx-background-image: url(../trash.png);
+	-fx-background-position: left;
+	-fx-background-size: 70%;
+	-fx-background-repeat: no-repeat;	
+}
+
+.btn-paid {
+	-fx-background-image: url(../cash.png);
+	-fx-background-position: left;
+	-fx-background-size: 80%;
+	-fx-background-repeat: no-repeat;	
+}
+
+.btn-print {
+	-fx-background-image: url(../print.png);
+	-fx-background-position: left;
+	-fx-background-size: 75%;
+	-fx-background-repeat: no-repeat;	
+}
+
+.item-flow-pane {
+	-fx-pref-width: 820px;
+	-fx-padding: 10;
+	-fx-hgap: 10;
+	-fx-vgap: 10;
+}
+
+.item-view {
+	-fx-pref-width: 260px;
+	-fx-background-color: rgb(204,204,204);
+}
+
+.item-view-title {
+	-fx-alignment: center;
+	-fx-padding: 5;
+	-fx-background-color: rgb(76,76,76);
+}
+
+.item-view-title Label{
+	-fx-text-fill: rgb(230,230,230);
+	-fx-font-size: 15px;
+}
+
+.item-view-body {
+	-fx-padding: 20;
+	-fx-alignment: center-right;
+}
+
+.item-view-body Label{
+	-fx-font-size: 24px;
+	-fx-font-family: Arial;
+}
+
+.item-view-footer {
+	-fx-alignment: center;
+	-fx-padding: 5;
+	-fx-background-color: rgb(179,179,179);
+}
+
+.item-view-o {
+	-fx-background-color: rgb(0,128,128);
+}
+

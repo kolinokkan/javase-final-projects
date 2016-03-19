@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox styleClass="main-frame" stylesheets="@customer.css" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.jdc.phoneshop.controller.pos.CustomerDialog">
+   <children>
+      <HBox styleClass="title-view">
+         <children>
+            <Label text="Customer List" />
+         </children>
+      </HBox>
+      <VBox prefHeight="369.0" prefWidth="680.0" styleClass="content-view">
+         <children>
+            <TableView fx:id="table" prefHeight="370.0" prefWidth="660.0">
+              <columns>
+                <TableColumn fx:id="colName" prefWidth="149.0" text="Name" />
+                <TableColumn fx:id="colPhone" prefWidth="155.0" text="Phone" />
+                  <TableColumn fx:id="colEmail" prefWidth="145.0" text="Email" />
+                  <TableColumn fx:id="colAddress" prefWidth="216.0" text="Address" />
+              </columns>
+            </TableView>
+         </children>
+      </VBox>
+      <HBox prefHeight="51.0" prefWidth="680.0" styleClass="btn-bar">
+         <children>
+            <Label text="Search Name" />
+            <TextField fx:id="schName" prefHeight="27.0" prefWidth="262.0" promptText="Enter Initial Charactor" />
+            <Button mnemonicParsing="false" onAction="#close" styleClass="btn-default" text="CLOSE" />
+            <Button mnemonicParsing="false" onAction="#select" styleClass="btn-ok" text="SET USER" />
+         </children>
+      </HBox>
+   </children>
+</VBox>

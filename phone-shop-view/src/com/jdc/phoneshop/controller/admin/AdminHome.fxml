@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+
+
+<BorderPane styleClass="main-frame" stylesheets="@home.css" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.jdc.phoneshop.controller.admin.AdminHome">
+   <top>
+      <MenuBar fx:id="menuBar" BorderPane.alignment="CENTER">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+                  <MenuItem mnemonicParsing="false" text="Reports" />
+              <MenuItem mnemonicParsing="false" text="Close" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Daily Business">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Purchases" />
+                  <MenuItem mnemonicParsing="false" text="Sell Price" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Master Data">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Category Admin" />
+                  <MenuItem mnemonicParsing="false" text="Maker Admin" />
+                  <SeparatorMenuItem mnemonicParsing="false" />
+                  <MenuItem mnemonicParsing="false" text="Employee Admin" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </top>
+   <center>
+      <StackPane fx:id="view" prefHeight="150.0" prefWidth="200.0" styleClass="content-view" BorderPane.alignment="CENTER" />
+   </center>
+   <bottom>
+      <HBox styleClass="message-view" BorderPane.alignment="CENTER">
+         <children>
+            <Label fx:id="message" />
+         </children>
+      </HBox>
+   </bottom>
+</BorderPane>

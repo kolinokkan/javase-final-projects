@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox styleClass="content-view" stylesheets="@common.css" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.jdc.phoneshop.controller.admin.MakerAdmin">
+   <children>
+      <HBox styleClass="title-view">
+         <children>
+            <Label styleClass="title" text="Maker Admin" />
+         </children>
+      </HBox>
+      <HBox styleClass="control-view">
+         <children>
+            <Label text="Maker Name" />
+            <TextField fx:id="inName" prefHeight="27.0" prefWidth="257.0" />
+            <Button mnemonicParsing="false" onAction="#save" styleClass="button-save" text="Add New Maker" />
+         </children>
+      </HBox>
+      <VBox styleClass="box-padding-10">
+         <children>
+            <ScrollPane hbarPolicy="NEVER" styleClass="content-height">
+               <content>
+                  <FlowPane fx:id="flowPane" styleClass="item-panel" />
+               </content>
+            </ScrollPane>
+         </children>
+      </VBox>
+   </children>
+</VBox>

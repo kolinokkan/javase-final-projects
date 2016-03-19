@@ -1,0 +1,12 @@
+bill
+bill_item
+category
+customer
+employee
+item
+item_price
+maker
+purchase
+purchase_item
+stock
+stock_history

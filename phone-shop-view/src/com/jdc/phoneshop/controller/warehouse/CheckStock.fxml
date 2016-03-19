@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox styleClass="content-view" stylesheets="@common.css" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.jdc.phoneshop.controller.warehouse.CheckStock">
+   <children>
+      <HBox styleClass="title-view">
+         <children>
+            <Label styleClass="title" text="Check Stock" />
+         </children>
+      </HBox>
+      <HBox styleClass="control-view">
+         <children>
+            <ComboBox fx:id="schCategory" prefWidth="150.0" promptText="Category" />
+            <ComboBox fx:id="schMaker" prefWidth="150.0" promptText="Maker" />
+            <TextField fx:id="schModel" prefHeight="27.0" prefWidth="204.0" promptText="Item Model" />
+            <TextField fx:id="schMaxCount" prefHeight="27.0" prefWidth="124.0" promptText="Max Count" />
+            <Button mnemonicParsing="false" onAction="#clear" styleClass="button-cancel" text="CLEAR" />
+            <TextField fx:id="inPurchaseCount" prefHeight="27.0" prefWidth="121.0" promptText="Purchase Count" />
+            <Button mnemonicParsing="false" onAction="#purchase" styleClass="button-ok" text="ADD TO PURCHASE" />
+         </children>
+      </HBox>
+      <VBox prefHeight="557.0" prefWidth="1180.0">
+         <children>
+            <TableView fx:id="table" prefHeight="510.0" prefWidth="1160.0">
+              <columns>
+                <TableColumn fx:id="colId" prefWidth="56.0" text="ID" />
+                <TableColumn fx:id="colCategory" prefWidth="208.0" text="Category" />
+                  <TableColumn fx:id="colMaker" prefWidth="186.0" text="Maker" />
+                  <TableColumn fx:id="colModel" prefWidth="193.0" text="Model" />
+                  <TableColumn fx:id="colSpecification" prefWidth="261.0" text="Specification" />
+                  <TableColumn fx:id="colCount" prefWidth="105.0" text="Count" />
+                  <TableColumn fx:id="colSellPrice" prefWidth="146.0" text="Sell Price" />
+              </columns>
+            </TableView>
+         </children>
+         <styleClass>
+            <String fx:value="box-padding-10" />
+            <String fx:value="content-height" />
+         </styleClass>
+      </VBox>
+   </children>
+</VBox>

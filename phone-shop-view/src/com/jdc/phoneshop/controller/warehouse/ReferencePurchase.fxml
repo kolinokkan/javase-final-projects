@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox styleClass="content-view" stylesheets="@common.css" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.jdc.phoneshop.controller.warehouse.ReferencePurchase">
+   <children>
+      <HBox styleClass="title-view">
+         <children>
+            <Label styleClass="title" text="Reference Purchase" />
+         </children>
+      </HBox>
+      <HBox prefHeight="100.0" prefWidth="200.0" styleClass="content-height-full">
+         <children>
+            <VBox styleClass="content-panel-40">
+               <children>
+                  <HBox styleClass="sub-title-view">
+                     <children>
+                        <Label styleClass="sub-title" text="Purchases" />
+                     </children>
+                  </HBox>
+                  <HBox styleClass="form-group">
+                     <children>
+                        <ComboBox fx:id="schStatus" prefWidth="150.0" promptText="Status" styleClass="form-item" />
+                     </children>
+                  </HBox>
+                  <TableView fx:id="pcTable" prefHeight="476.0" prefWidth="570.0">
+                    <columns>
+                      <TableColumn fx:id="colDate" prefWidth="131.0" text="Date" />
+                      <TableColumn fx:id="colStatus" prefWidth="126.0" text="Status" />
+                        <TableColumn fx:id="colEmployee" prefWidth="179.0" text="Employee" />
+                    </columns>
+                  </TableView>
+               </children>
+            </VBox>
+            <VBox styleClass="content-panel-60">
+               <children>
+                  <HBox styleClass="sub-title-view">
+                     <children>
+                        <Label styleClass="sub-title" text="Purchase Items" />
+                     </children>
+                  </HBox>
+                  <HBox styleClass="form-group">
+                     <children>
+                        <Button mnemonicParsing="false" onAction="#setDefault" styleClass="button-cancel" text="SET DEFAULT" />
+                        <Button fx:id="btnUpdate" mnemonicParsing="false" onAction="#update" styleClass="button-save" text="UPDATE ITEMS" />
+                     </children>
+                  </HBox>
+                  <TableView fx:id="piTable" prefHeight="478.0" prefWidth="560.0">
+                    <columns>
+                      <TableColumn fx:id="colItem" prefWidth="235.0" text="Item" />
+                      <TableColumn fx:id="colCount" prefWidth="139.0" text="Count" />
+                        <TableColumn fx:id="colBuyPrice" prefWidth="144.0" text="Buy Price" />
+                        <TableColumn fx:id="colSellPrice" prefWidth="151.0" text="Sell Price" />
+                    </columns>
+                  </TableView>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+   </children>
+</VBox>

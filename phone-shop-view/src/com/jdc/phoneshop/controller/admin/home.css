@@ -1,0 +1,15 @@
+.main-frame {
+	-fx-pref-width: 1180px;
+	-fx-pref-height: 720px;
+}
+
+.message-view {
+	-fx-pref-height: 60px;
+	-fx-background-color: rgb(230,230,230);
+	-fx-padding: 0 0 0 10;
+	-fx-alignment: center-left ;
+}
+
+.content-view {
+	-fx-pref-height: 660px;
+}

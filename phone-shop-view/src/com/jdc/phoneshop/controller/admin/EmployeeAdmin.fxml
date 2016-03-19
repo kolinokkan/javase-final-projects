@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox styleClass="content-view" stylesheets="@common.css" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.jdc.phoneshop.controller.admin.EmployeeAdmin">
+   <children>
+      <HBox styleClass="title-view">
+         <children>
+            <Label styleClass="title" text="Employee Admin" />
+         </children>
+      </HBox>
+      <HBox styleClass="control-view">
+         <children>
+            <ComboBox fx:id="schRoles" prefWidth="150.0" promptText="Select Role" />
+            <TextField fx:id="schName" promptText="Search Name" />
+            <Button mnemonicParsing="false" onAction="#clearSearch" styleClass="button-cancel" text="CLEAR" />
+         </children>
+      </HBox>
+      <HBox styleClass="content-height">
+         <children>
+            <HBox>
+               <children>
+                  <TableView fx:id="table" prefWidth="832.0" tableMenuButtonVisible="true">
+                    <columns>
+                      <TableColumn fx:id="colRole" prefWidth="150.0" text="Role" />
+                      <TableColumn fx:id="colName" prefWidth="239.0" text="Name" />
+                        <TableColumn fx:id="colLoginId" prefWidth="170.0" text="Login ID" />
+                        <TableColumn fx:id="colPhone" prefWidth="248.0" text="Phone" />
+                    </columns>
+                  </TableView>
+               </children>
+               <styleClass>
+                  <String fx:value="content-panel-data" />
+                  <String fx:value="box-padding-10" />
+               </styleClass>
+            </HBox>
+            <VBox prefHeight="200.0" prefWidth="100.0" styleClass="content-panel-input">
+               <children>
+                  <Label styleClass="sub-title" text="Add New Employee" />
+                  <ComboBox fx:id="inRoles" prefWidth="150.0" promptText="Select Role" />
+                  <TextField fx:id="inName" promptText="Employee Name" />
+                  <TextField fx:id="inLoginId" promptText="Enter Login ID" />
+                  <TextField fx:id="inPhoneNumber" promptText="Enter Phone Number" />
+                  <HBox styleClass="form-group">
+                     <children>
+                        <Button mnemonicParsing="false" onAction="#clear" styleClass="button-cancel" text="CLEAR" />
+                        <Button mnemonicParsing="false" onAction="#addEmployee" styleClass="button-save" text="ADD NEW EMPLOYEE" />
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+   </children>
+</VBox>

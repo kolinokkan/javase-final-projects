@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox styleClass="content-view" stylesheets="@common.css" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.jdc.phoneshop.controller.warehouse.StoreHome">
+   <children>
+      <HBox styleClass="title-view">
+         <children>
+            <Label styleClass="title" text="Store Home" />
+         </children>
+      </HBox>
+      <VBox alignment="BOTTOM_CENTER">
+         <children>
+            <HBox fx:id="btnView" prefHeight="126.0" prefWidth="1180.0" styleClass="home-btn-view">
+               <children>
+                  <VBox id="mobile" prefHeight="200.0" prefWidth="100.0">
+                     <styleClass>
+                        <String fx:value="home-btn" />
+                        <String fx:value="home-btn-selected" />
+                     </styleClass>
+                     <children>
+                        <HBox>
+                           <styleClass>
+                              <String fx:value="btn-mobile" />
+                              <String fx:value="btn-image" />
+                           </styleClass>
+                        </HBox>
+                        <HBox alignment="CENTER" styleClass="home-btn-capture">
+                           <children>
+                              <Label text="Moblie" textFill="#2b1846">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                           <padding>
+                              <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                           </padding>
+                        </HBox>
+                     </children>
+                  </VBox>
+                  <VBox id="tablet" layoutX="52.0" layoutY="10.0" prefHeight="200.0" prefWidth="100.0">
+                     <styleClass>
+                        <String fx:value="home-btn" />
+                        <String fx:value="home-btn-default" />
+                     </styleClass>
+                     <children>
+                        <HBox>
+                           <styleClass>
+                              <String fx:value="btn-image" />
+                              <String fx:value="btn-tablet" />
+                           </styleClass>
+                        </HBox>
+                        <HBox alignment="CENTER" styleClass="home-btn-capture">
+                           <children>
+                              <Label text="Tablet" textFill="#2b1846">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                           <padding>
+                              <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                           </padding>
+                        </HBox>
+                     </children>
+                  </VBox>
+                  <VBox id="accesory" layoutX="302.0" layoutY="10.0" prefHeight="200.0" prefWidth="100.0">
+                     <styleClass>
+                        <String fx:value="home-btn" />
+                        <String fx:value="home-btn-default" />
+                     </styleClass>
+                     <children>
+                        <HBox>
+                           <styleClass>
+                              <String fx:value="btn-accessory" />
+                              <String fx:value="btn-image" />
+                           </styleClass>
+                        </HBox>
+                        <HBox alignment="CENTER" styleClass="home-btn-capture">
+                           <children>
+                              <Label text="Accessories" textFill="#2b1846">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                           <padding>
+                              <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                           </padding>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+            <BarChart fx:id="chart">
+              <xAxis>
+                <CategoryAxis side="BOTTOM" />
+              </xAxis>
+              <yAxis>
+                <NumberAxis side="LEFT" />
+              </yAxis>
+            </BarChart>
+         </children>
+         <styleClass>
+            <String fx:value="content-height-full" />
+            <String fx:value="home-background" />
+            <String fx:value="box-padding-10" />
+         </styleClass>
+      </VBox>
+   </children>
+</VBox>

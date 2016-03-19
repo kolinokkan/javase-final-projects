@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox styleClass="content-view" stylesheets="@common.css" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.jdc.phoneshop.controller.warehouse.AddItems">
+   <children>
+      <HBox styleClass="title-view">
+         <children>
+            <Label styleClass="title" text="Add Items" />
+         </children>
+      </HBox>
+      <HBox prefHeight="100.0" prefWidth="200.0">
+         <children>
+            <VBox prefHeight="200.0" prefWidth="100.0" styleClass="content-panel-input">
+               <children>
+                  <HBox styleClass="sub-title-view">
+                     <children>
+                        <Label styleClass="sub-title" text="Add New Item" />
+                     </children>
+                  </HBox>
+                  <VBox styleClass="form-group">
+                     <children>
+                        <Label text="Category" />
+                        <ComboBox fx:id="inCategory" prefWidth="150.0" styleClass="form-item" />
+                     </children>
+                  </VBox>
+                  <VBox layoutX="30.0" layoutY="41.0" styleClass="form-group">
+                     <children>
+                        <Label text="Maker" />
+                        <ComboBox fx:id="inMaker" prefWidth="150.0" styleClass="form-item" />
+                     </children>
+                  </VBox>
+                  <VBox layoutX="30.0" layoutY="95.0" styleClass="form-group">
+                     <children>
+                        <Label text="Model" />
+                        <TextField fx:id="inModel" />
+                     </children>
+                  </VBox>
+                  <VBox layoutX="30.0" layoutY="149.0" styleClass="form-group">
+                     <children>
+                        <Label text="Specifications" />
+                        <TextArea fx:id="inSpecification" prefHeight="200.0" prefWidth="200.0" />
+                     </children>
+                  </VBox>
+                  <HBox styleClass="form-group">
+                     <children>
+                        <Button mnemonicParsing="false" onAction="#clearInputs" styleClass="button-cancel" text="CLEAR" />
+                        <Button mnemonicParsing="false" onAction="#addItem" styleClass="button-save" text="ADD ITEM" />
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+            <VBox prefHeight="200.0" prefWidth="100.0" styleClass="content-panel-data">
+               <children>
+                  <HBox styleClass="sub-title-view">
+                     <children>
+                        <Label styleClass="sub-title" text="Items To ADD" />
+                     </children>
+                  </HBox>
+                  <TableView fx:id="table" prefHeight="486.0" prefWidth="830.0">
+                    <columns>
+                      <TableColumn fx:id="colCategory" prefWidth="160.0" text="Category" />
+                      <TableColumn fx:id="colMaker" prefWidth="149.0" text="Maker" />
+                        <TableColumn fx:id="colModel" prefWidth="192.0" text="Model" />
+                        <TableColumn fx:id="colSpecification" prefWidth="319.0" text="Specification" />
+                    </columns>
+                  </TableView>
+                  <HBox styleClass="form-group">
+                     <children>
+                        <Button mnemonicParsing="false" onAction="#clearTable" styleClass="button-cancel" text="CLEAR" />
+                        <Button mnemonicParsing="false" onAction="#saveItems" styleClass="button-save" text="SAVE ITEMS" />
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+         <styleClass>
+            <String fx:value="content-panel-full" />
+            <String fx:value="content-height-full" />
+         </styleClass>
+      </HBox>
+   </children>
+</VBox>

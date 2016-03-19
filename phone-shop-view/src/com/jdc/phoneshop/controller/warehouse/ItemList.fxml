@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox styleClass="content-view" stylesheets="@common.css" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.jdc.phoneshop.controller.warehouse.ItemList">
+   <children>
+      <HBox styleClass="title-view">
+         <children>
+            <Label styleClass="title" text="Item List" />
+         </children>
+      </HBox>
+      <HBox styleClass="control-view">
+         <children>
+            <ComboBox fx:id="combCategory" prefWidth="150.0" promptText="Category" />
+            <ComboBox fx:id="combMaker" prefWidth="150.0" promptText="Maker" />
+            <TextField fx:id="textModel" promptText="Model" />
+            <Button mnemonicParsing="false" onAction="#clear" styleClass="button-cancel" text="CLEAR" />
+            <Button mnemonicParsing="false" styleClass="button-save" text="ADD ITEMS" />
+         </children>
+      </HBox>
+      <VBox prefHeight="478.0" prefWidth="1180.0" styleClass="box-padding-10">
+         <children>
+            <TableView fx:id="table" prefHeight="468.0" prefWidth="1160.0">
+              <columns>
+                <TableColumn fx:id="colId" prefWidth="56.0" text="ID" />
+                <TableColumn fx:id="colCategory" prefWidth="201.0" text="Category" />
+                  <TableColumn fx:id="colMaker" prefWidth="189.0" text="Maker" />
+                  <TableColumn fx:id="colModel" prefWidth="205.0" text="Model" />
+                  <TableColumn fx:id="colSpecification" prefWidth="368.0" text="Specifications" />
+              </columns>
+            </TableView>
+         </children>
+      </VBox>
+      <HBox styleClass="control-view">
+         <children>
+            <Label text="Count" />
+            <TextField fx:id="textCount" />
+            <Button mnemonicParsing="false" onAction="#purchase" styleClass="button-save" text="PURCHASE" />
+         </children>
+      </HBox>
+   </children>
+</VBox>

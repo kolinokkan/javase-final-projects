@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox styleClass="main-frame" stylesheets="@common.css" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.jdc.phoneshop.controller.SignUp">
+   <children>
+      <HBox styleClass="title-view">
+         <children>
+            <Label styleClass="title" text="Phone Shop Sign Up" />
+         </children>
+      </HBox>
+      <VBox styleClass="form">
+         <children>
+            <HBox layoutX="50.0" layoutY="70.0" styleClass="form-group">
+               <children>
+                  <Label styleClass="form-label" text="Name" />
+                  <TextField fx:id="name" promptText="Enter User Name" styleClass="form-item" />
+               </children>
+            </HBox>
+            <HBox styleClass="form-group">
+               <children>
+                  <Label styleClass="form-label" text="Login ID" />
+                  <TextField fx:id="loginId" promptText="Enter Login ID" styleClass="form-item" />
+               </children>
+            </HBox>
+            <HBox layoutX="50.0" layoutY="70.0" styleClass="form-group">
+               <children>
+                  <Label styleClass="form-label" text="Password" />
+                  <PasswordField fx:id="password" promptText="Enter Password" styleClass="form-item" />
+               </children>
+            </HBox>
+            <HBox layoutX="50.0" layoutY="117.0" styleClass="form-group">
+               <children>
+                  <Label styleClass="form-label" text="Confirm Password" />
+                  <PasswordField fx:id="password2" promptText="Enter Confirm Password" styleClass="form-item" />
+               </children>
+            </HBox>
+            <HBox layoutX="50.0" layoutY="164.0" styleClass="form-group">
+               <children>
+                  <Label styleClass="form-label" />
+                  <Button mnemonicParsing="false" onAction="#cancel" styleClass="button-cancel" text="CANCEL" />
+                  <Button mnemonicParsing="false" onAction="#signUp" styleClass="button-ok" text="SIGNUP" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <HBox styleClass="message-view">
+         <children>
+            <Label fx:id="message" />
+         </children>
+      </HBox>
+   </children>
+</VBox>

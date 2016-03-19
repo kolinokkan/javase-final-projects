@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane styleClass="main-frame" stylesheets="@home.css" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.jdc.phoneshop.controller.warehouse.WareHouseHome">
+   <top>
+      <MenuBar fx:id="menuBar" BorderPane.alignment="CENTER">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+                  <MenuItem mnemonicParsing="false" text="Buyer Home" />
+                  <MenuItem mnemonicParsing="false" text="Store Home" />
+                  <SeparatorMenuItem mnemonicParsing="false" />
+              <MenuItem mnemonicParsing="false" text="Close" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Buyer Menu">
+            <items>
+                  <MenuItem mnemonicParsing="false" text="Add Items" />
+                  <MenuItem mnemonicParsing="false" text="Item List" />
+                  <SeparatorMenuItem mnemonicParsing="false" />
+                  <MenuItem mnemonicParsing="false" text="Reference Purchase" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Store Menu">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Check Stock" />
+                  <MenuItem mnemonicParsing="false" text="Reference Purchase" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </top>
+   <bottom>
+      <HBox styleClass="message-view" BorderPane.alignment="CENTER">
+         <children>
+            <Label fx:id="message" text="Label" />
+         </children>
+      </HBox>
+   </bottom>
+   <center>
+      <StackPane fx:id="view" prefHeight="150.0" prefWidth="200.0" styleClass="content-view" BorderPane.alignment="CENTER" />
+   </center>
+</BorderPane>
